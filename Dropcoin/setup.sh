@@ -80,11 +80,11 @@ for i in `seq 1 1 $MNCOUNT`; do
   read ALIAS  
 
   echo ""
-  echo "Enter port for node $ALIAS (Any valid free port matching config from steps before: i.E. 8001)"
+  echo "Enter port for node $ALIAS (Any valid free port matching config from steps before: i.E. 18096)"
   read PORT
 
   echo ""
-  echo "Enter RPC Port (Any valid free port: i.E. 9001)"
+  echo "Enter RPC Port (Any valid free port: i.E. 9501)"
   read RPCPORT
 
   echo ""
