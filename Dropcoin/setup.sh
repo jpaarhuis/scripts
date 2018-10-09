@@ -125,7 +125,7 @@ for i in `seq 1 1 $MNCOUNT`; do
   echo "maxconnections=256" >> ${NAME}.conf_TEMP
   echo "masternode=1" >> ${NAME}.conf_TEMP
   if [[ $ADDBIND =~ "y" ]] ; then
-    echo "binding=$BIND" >> ${NAME}.conf_TEMP
+    echo "bind=$BIND" >> ${NAME}.conf_TEMP
   fi
   echo "" >> ${NAME}.conf_TEMP
   echo "port=$PORT" >> ${NAME}.conf_TEMP
