@@ -40,7 +40,7 @@ for FILE in ~/bin/giantd_$PARAM1.sh; do
 	  WALLETVERSION=$(echo $WALLETVERSION | tr 'version : ' " ")
 	  WALLETVERSION=$(echo $WALLETVERSION | tr -d ' ' )
 	  
-	  if ! [ "$WALLETVERSION" == "2030003" ]; then
+	  if ! [ "$WALLETVERSION" == "1020201" ]; then
 	     echo "!!!Your wallet $GIANTNAME is OUTDATED!!!"
 	  fi
 
