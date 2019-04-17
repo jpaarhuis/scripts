@@ -64,8 +64,8 @@ if [[ ${DOSETUP,,} =~ "y" ]] ; then
   
   wget https://github.com/GiantPay/GiantCore/releases/download/1.2.2.1/giant-1.2.2.1-linux64.zip
   chmod 775 giant-1.2.2.1-linux64.zip
-  unzip giant-1.2.2.1-linux64.zip
-  #cd ./giant-1.2.2.1/bin
+  unzip giant-1.2.2.1-linux64.zip -d bin
+  cd ./bin
   sudo chmod 775 *
   sudo mv ./giant* /usr/bin
   #read
