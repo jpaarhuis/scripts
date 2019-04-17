@@ -5,7 +5,7 @@ Shell script to install a Giant masternode on a Linux server running Ubuntu 16.0
 ## Installation:
 Script giant.sh contains some useful tools to install, analize and repair your masternode from a command line menu.
 ```
-wget https://raw.githubusercontent.com/jpaarhuis/scripts/master/giant/giant.sh -O giant.sh && chmod 755 giant.sh && ./giant.sh
+wget https://raw.githubusercontent.com/jpaarhuis/scripts/master/Giant/giant.sh -O giant.sh && chmod 755 giant.sh && ./giant.sh
 ```
 ***Steps:***
   1. Choose option 6. INSTALL NEW NODES (type 6, press ENTER).
@@ -92,7 +92,7 @@ Command:
 ## GIANT.sh script:
 Start: 	
 ```
-wget https://raw.githubusercontent.com/GIANTPROJECT/Guides/master/giant.sh -O giant.sh && chmod 755 giant.sh && ./giant.sh
+wget https://raw.githubusercontent.com/jpaarhuis/scripts/master/Giant/giant.sh -O giant.sh && chmod 755 giant.sh && ./giant.sh
 ```
  
 Options:
