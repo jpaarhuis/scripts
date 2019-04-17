@@ -80,7 +80,7 @@ for FILE in ~/bin/giantd_$PARAM1.sh; do
 		  cd $GIANTCONFPATH
 		  echo CURRENT CONF FOLDER: $PWD
 		  echo "Copy BLOCKCHAIN without conf files"
-		  wget http://167.86.97.235/giant/bootstrap/bootstrap.zip -O bootstrap.zip
+		  wget http://207.180.227.218/giant/bootstrap.zip -O bootstrap.zip
 		  # rm -R peers.dat 
 		  rm -R ./database
 		  rm -R ./blocks	
