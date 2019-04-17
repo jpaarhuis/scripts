@@ -137,7 +137,7 @@ for i in `seq 1 1 $MNCOUNT`; do
   
   if [ -z "$PORT" ]; then
     PORT=40444
-	RPCPORT=9234
+	RPCPORT=9534
 	PORT1=""
     for (( ; ; ))
     do
@@ -155,7 +155,7 @@ for i in `seq 1 1 $MNCOUNT`; do
 
   if [ -z "$RPCPORT" ]; then
     echo ""
-    echo "Enter RPC Port (Any valid free port: i.E. 9234)"
+    echo "Enter RPC Port (Any valid free port: i.E. 9534)"
     read RPCPORT
   fi
   
