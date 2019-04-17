@@ -132,17 +132,17 @@ for i in `seq 1 1 $MNCOUNT`; do
   echo "masternodeaddr=$IP:$PORT" >> ${NAME}.conf_TEMP
   echo "masternodeprivkey=$PRIVKEY" >> ${NAME}.conf_TEMP
   echo "" >> ${NAME}.conf_TEMP
-  echo "addnode=188.165.251.53" >> $CONF_DIR/$CONF_FILE
-  echo "addnode=199.247.19.79" >> $CONF_DIR/$CONF_FILE
-  echo "addnode=199.247.16.41" >> $CONF_DIR/$CONF_FILE
-  echo "addnode=104.238.167.200" >> $CONF_DIR/$CONF_FILE
-  echo "addnode=199.247.19.190" >> $CONF_DIR/$CONF_FILE
-  echo "addnode=199.247.6.197" >> $CONF_DIR/$CONF_FILE
-  echo "addnode=108.61.173.115" >> $CONF_DIR/$CONF_FILE
-  echo "addnode=209.250.229.44" >> $CONF_DIR/$CONF_FILE
-  echo "addnode=209.250.230.205" >> $CONF_DIR/$CONF_FILE
-  echo "addnode=45.76.142.181" >> $CONF_DIR/$CONF_FILE
-  echo "addnode=45.32.177.50" >> $CONF_DIR/$CONF_FILE
+  echo "addnode=199.247.16.75" >> $CONF_DIR/$CONF_FILE
+  echo "addnode=51.75.87.99" >> $CONF_DIR/$CONF_FILE
+  echo "addnode=172.245.210.224" >> $CONF_DIR/$CONF_FILE
+  echo "addnode=149.28.181.170" >> $CONF_DIR/$CONF_FILE
+  echo "addnode=108.61.213.97" >> $CONF_DIR/$CONF_FILE
+  echo "addnode=52.174.51.53" >> $CONF_DIR/$CONF_FILE
+  echo "addnode=80.209.238.249" >> $CONF_DIR/$CONF_FILE
+  echo "addnode=51.15.225.233" >> $CONF_DIR/$CONF_FILE
+  echo "addnode=51.144.45.226" >> $CONF_DIR/$CONF_FILE
+  echo "addnode=107.172.201.161" >> $CONF_DIR/$CONF_FILE
+  echo "addnode=51.38.97.246" >> $CONF_DIR/$CONF_FILE
 
   sudo ufw allow $PORT/tcp
 
