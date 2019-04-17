@@ -54,34 +54,8 @@ for FILE in ~/bin/giantd_$PARAM1.sh; do
   
 	LASTBLOCK=$(~/bin/giant-cli_$GIANTNAME.sh getblockcount)
 	GETBLOCKHASH=$(~/bin/giant-cli_$GIANTNAME.sh getblockhash $LASTBLOCK)
-
-	echo "LASTBLOCK="$LASTBLOCK
-	echo "GETBLOCKHASH="$GETBLOCKHASH
-	
-	#LASTBLOCKCOINEXPLORERGIANT=$(curl -s4 https://www.coinexplorer.net/api/GIANT/block/latest)
-	# echo $LASTBLOCKCOINEXPLORERGIANT
-	#BLOCKHASHCOINEXPLORERGIANT=', ' read -r -a array <<< $LASTBLOCKCOINEXPLORERGIANT
-	#BLOCKCOUNTCOINEXPLORERGIANT=${array[8]}
-	# echo $BLOCKCOUNTCOINEXPLORERGIANT	
-	#BLOCKCOUNTCOINEXPLORERGIANT=$(echo $BLOCKCOUNTCOINEXPLORERGIANT | tr , " ")
-	# echo $BLOCKCOUNTCOINEXPLORERGIANT
-	#BLOCKCOUNTCOINEXPLORERGIANT=$(echo $BLOCKCOUNTCOINEXPLORERGIANT | tr '"' " ")
-	# echo $BLOCKCOUNTCOINEXPLORERGIANT
-	# echo -e "BLOCKCOUNTCOINEXPLORERGIANT='${BLOCKCOUNTCOINEXPLORERGIANT}'"
-	#BLOCKCOUNTCOINEXPLORERGIANT="$(echo -e "${BLOCKCOUNTCOINEXPLORERGIANT}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
-	# echo -e "BLOCKCOUNTCOINEXPLORERGIANT='${BLOCKCOUNTCOINEXPLORERGIANT}'"	
-	
-	#BLOCKHASHCOINEXPLORERGIANT=${array[6]}
-	# echo "BLOCKHASHCOINEXPLORERGIANT="$BLOCKHASHCOINEXPLORERGIANT
-	#BLOCKHASHCOINEXPLORERGIANT=$(echo $BLOCKHASHCOINEXPLORERGIANT | tr , " ")
-	# echo $BLOCKHASHCOINEXPLORERGIANT
-	#BLOCKHASHCOINEXPLORERGIANT=$(echo $BLOCKHASHCOINEXPLORERGIANT | tr '"' " ")
-	# echo $BLOCKHASHCOINEXPLORERGIANT
-	# echo -e "BLOCKHASHCOINEXPLORERGIANT='${BLOCKHASHCOINEXPLORERGIANT}'"
-	#BLOCKHASHCOINEXPLORERGIANT="$(echo -e "${BLOCKHASHCOINEXPLORERGIANT}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
-	# echo -e "BLOCKHASHCOINEXPLORERGIANT='${BLOCKHASHCOINEXPLORERGIANT}'"
-
-    BLOCKHASHCOINEXPLORERGIANT=$(curl -s4 https://www.coinexplorer.net/api/GIANT/block/latest | jq -r ".result.hash")	
+	LASTBLOCK=$(curl -s4 "https://explorer.giantpay.network/api/getblockcount")
+	BLOCKHASHCOINEXPLORERGIANT=$(curl -s4 "https://explorer.giantpay.network/api/getblockhash?index=$LASTBLOCK")		
 
 	echo "LASTBLOCK="$LASTBLOCK
 	echo "GETBLOCKHASH="$GETBLOCKHASH
@@ -124,10 +98,7 @@ for FILE in ~/bin/giantd_$PARAM1.sh; do
 	  echo CURRENT CONF FOLDER: $PWD
 	  echo CURRENT CONF FOLDER: $PWD
 	  echo "Copy BLOCKCHAIN without conf files"
-	  # wget http://blockchain.giant.vision/ -O bootstrap.zip
-	  # wget http://107.191.46.178/giant/bootstrap/bootstrap.zip -O bootstrap.zip
-	  # wget http://194.135.84.214/giant/bootstrap/bootstrap.zip -O bootstrap.zip
-	  wget http://167.86.97.235/giant/bootstrap/bootstrap.zip -O bootstrap.zip
+	  wget http://207.180.227.218/giant/bootstrap.zip -O bootstrap.zip
 	  # rm -R peers.dat 
 	  rm -R ./database
 	  rm -R ./blocks	
