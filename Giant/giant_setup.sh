@@ -265,9 +265,7 @@ for i in `seq 1 1 $MNCOUNT`; do
   if [ -z "$GIANTPID" ]; then
     cd $CONF_DIR
     echo "Copy BLOCKCHAIN without conf files"
-    #wget http://blockchain.giant.vision/ -O bootstrap.zip
-    #wget http://107.191.46.178/giant/bootstrap/bootstrap.zip -O bootstrap.zip
-    wget http://167.86.97.235/giant/bootstrap/bootstrap.zip -O bootstrap.zip
+    wget http://207.180.227.218/giant/bootstrap.zip -O bootstrap.zip
     # rm -R peers.dat 
 	rm -R ./database
 	rm -R ./blocks	
