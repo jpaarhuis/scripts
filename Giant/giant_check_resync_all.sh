@@ -42,19 +42,13 @@ for FILE in ~/bin/giantd_$PARAM1.sh; do
   
 	LASTBLOCK=$(~/bin/giant-cli_$GIANTNAME.sh getblockcount)
 	GETBLOCKHASH=$(~/bin/giant-cli_$GIANTNAME.sh getblockhash $LASTBLOCK)
-
-	echo "LASTBLOCK="$LASTBLOCK
-	echo "GETBLOCKHASH="$GETBLOCKHASH
-	
-    BLOCKHASHCOINEXPLORERGIANT=$(curl -s4 https://www.coinexplorer.net/api/GIANT/block/latest | jq -r ".result.hash")	
+    	LASTBLOCK=$(curl -s4 "https://explorer.giantpay.network/api/getblockcount")
+	BLOCKHASHCOINEXPLORERGIANT=$(curl -s4 "https://explorer.giantpay.network/api/getblockhash?index=$LASTBLOCK")	
 
 	echo "LASTBLOCK="$LASTBLOCK
 	echo "GETBLOCKHASH="$GETBLOCKHASH
 	echo "BLOCKHASHCOINEXPLORERGIANT="$BLOCKHASHCOINEXPLORERGIANT
 
-
-	echo "GETBLOCKHASH="$GETBLOCKHASH
-	echo "BLOCKHASHCOINEXPLORERGIANT="$BLOCKHASHCOINEXPLORERGIANT
 	if [ "$GETBLOCKHASH" == "$BLOCKHASHCOINEXPLORERGIANT" ]; then
 		echo $DATE" Wallet $GIANTNAME is SYNCED!"
 		break
