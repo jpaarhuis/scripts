@@ -20,7 +20,7 @@ mkdir -p GIANT_TMP
 cd GIANT_TMP
 wget https://github.com/newfile.zip
 sudo chmod 775 newfile.zip
-tar -xvzf newfile.zip
+unzip newfile.zip
 
 rm -f newfile.zip
 sudo chmod 775 ./*
