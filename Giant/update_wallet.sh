@@ -3,7 +3,7 @@ echo
 echo "GIANT - Masternode updater"
 echo ""
 echo "Welcome to the GIANT Masternode update script."
-echo "Wallet vX.X.X"
+echo "Wallet v1.3.0"
 echo
 
 for filename in ~/bin/giant-cli*.sh; do
