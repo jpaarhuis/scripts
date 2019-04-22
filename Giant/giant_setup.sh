@@ -63,7 +63,7 @@ if [[ ${DOSETUP,,} =~ "y" ]] ; then
   cd ~/giant_tmp
   
   wget https://github.com/GiantPay/GiantCore/releases/download/1.3.0.0/giant-1.3.0-x86_64-linux-gnu.tar.gz
-  chmod -R 755 /root/giant/giant-1.3.0-x86_64-linux-gnu.tar.gz
+  chmod -R 755 giant-1.3.0-x86_64-linux-gnu.tar.gz
   tar -xzf giant-1.3.0-x86_64-linux-gnu.tar.gz
   cd ./giant-1.3.0/bin
   sudo chmod 775 *
