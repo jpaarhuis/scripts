@@ -18,11 +18,12 @@ cd
 
 mkdir -p GIANT_TMP
 cd GIANT_TMP
-wget https://github.com/newfile.zip
-sudo chmod 775 newfile.zip
-unzip newfile.zip
+wget https://github.com/GiantPay/GiantCore/releases/download/1.3.0.0/giant-1.3.0-x86_64-linux-gnu.tar.gz
+chmod -R 755 giant-1.3.0-x86_64-linux-gnu.tar.gz
+tar -xzf giant-1.3.0-x86_64-linux-gnu.tar.gz
 
-rm -f newfile.zip
+rm -f giant-1.3.0-x86_64-linux-gnu.tar.gz
+cd ./giant-1.3.0/bin
 sudo chmod 775 ./*
 sudo mv ./giant* /usr/bin
 
