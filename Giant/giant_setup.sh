@@ -62,10 +62,10 @@ if [[ ${DOSETUP,,} =~ "y" ]] ; then
   mkdir -p ~/giant_tmp
   cd ~/giant_tmp
   
-  wget https://github.com/GiantPay/GiantCore/releases/download/1.2.2.1/giant-1.2.2.1-linux64.zip
-  chmod 775 giant-1.2.2.1-linux64.zip
-  unzip giant-1.2.2.1-linux64.zip -d bin
-  cd ./bin
+  wget https://github.com/GiantPay/GiantCore/releases/download/1.3.0.0/giant-1.3.0-x86_64-linux-gnu.tar.gz
+  chmod -R 755 /root/giant/giant-1.3.0-x86_64-linux-gnu.tar.gz
+  tar -xzf giant-1.3.0-x86_64-linux-gnu.tar.gz
+  cd ./giant-1.3.0/bin
   sudo chmod 775 *
   sudo mv ./giant* /usr/bin
   #read
